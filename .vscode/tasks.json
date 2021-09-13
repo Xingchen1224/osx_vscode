@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "clang++ compile c++17",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-g",
+				"${workspaceFolder}/*.cpp",
+				"-I/Users/xingchenwang/installed/x64-osx/include",
+				"-L/Users/xingchenwang/installed/x64-osx/lib",
+				"-lopencv_core",
+				"-lopencv_imgcodecs",
+				"-lopencv_imgproc",
+				"-lpng16",
+				"-ljpeg",
+				"-lz",
+				"-lwebp",
+				"-llzma",
+				"-ltiff",
+				"-framework",
+				"OpenCL",
+				"-std=c++17",
+				"-o",
+				"${workspaceFolder}/app.out"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/clang++"
+		}
+	]
+}
